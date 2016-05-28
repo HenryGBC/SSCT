@@ -1,0 +1,124 @@
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+body {
+  background: #fafafa;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+.content{
+    background: #dddddd;
+    width: 600px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+
+}
+.image-bg{
+    background: url("../images/sistema-calefaccion-solar.jpg");
+    width: 600px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: 600px 400px;
+    position: absolute;
+    right: 0;
+}
+
+
+.signals{
+    position: absolute;
+    width: 300px;
+    height: 400px;
+
+}
+.signals div{
+    width: 70px;
+    height: 55px;
+    background: black;
+    border: 4px inset #757575;
+}
+.signals div:nth-child(2){
+    position: absolute;
+    bottom: 0;
+}
+
+#calefaccion::after{
+    content: "Calefacción";
+    margin-left: 80px;
+    font-size: 30px;
+    font-weight: 600;
+}
+#enfriamiento::after{
+    content: "Enfriamiento";
+    margin-left: 80px;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+.active-cooling{
+    background: #17A1E2 !important;
+}
+.active-heating{
+    background: yellow !important;
+}
+.buttons-hours{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+}
+
+.buttons-hours .btn{
+    background: gray;
+    color: white;
+    padding: 10px;
+    border-bottom: 3px solid #585858;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.buttons-hours .active{
+    background: #A5A5A5;
+    padding: 10px;
+    font-size: 13px;
+    border-bottom: 2px inset #585858;
+    height: 17px;
+}
+
+.temperatures{
+  position: absolute;
+  height: 250px;
+  width: 60px;
+  right: 0;
+  bottom: 106px;
+  border: 2px solid black;
+  border-radius: 7px;
+  padding: 10px;
+}
+
+.grades{
+  width: 60px;
+  height: 20px;
+  background: red;
+  border: 1px solid;
+  margin-bottom: 7px;
+  opacity: 0.4;
+}
+
+.hot{
+  background: #EC4949;
+}
+.medium{
+  background: #47C347;
+}
+.cold{
+  background: #17A1E2;
+}

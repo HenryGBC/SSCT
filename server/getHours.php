@@ -1,6 +1,8 @@
 <?php
 header('Access-Control-Allow-Origin: *');  
-
+require_once dirname(__FILE__) . '/Phpmodbus/ModbusMaster.php';
+// Create Modbus object
+$modbus = new ModbusMaster("192.168.10.12", "TCP");
 $HOUR_EXTEND= 'extend';
 $HOUR_NORMAL = 'normal';
 $HOUR_WEEKEND = 'weekend';

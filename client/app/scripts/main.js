@@ -2,7 +2,19 @@
 
 (function () {
   'use strict';
-
+  var config = {
+      apiKey: "AIzaSyDDfGHsuNiZ8h2MU8oG_1H9FJBMzfjYbMc",
+      authDomain: "project-6124785050910967847.firebaseapp.com",
+      databaseURL: "https://project-6124785050910967847.firebaseio.com",
+      storageBucket: "project-6124785050910967847.appspot.com",
+  };
+  firebase.initializeApp(config);
+  var db = firebase.database();
+  
+  var state = '';
+   var dataHour = {
+      value: 'normal'
+    }
   /*var ref = new Firebase('https://ssct.firebaseio.com/');
    ref.child('temperatureact').on('value', function(element){
     let tempAct = element.val();
@@ -15,7 +27,7 @@
    });*/
 
   // Escoger horario
-
+  
   $('.btn').on('click', function (event) {
     var hour = $(event.currentTarget).data('hour');
 
@@ -23,6 +35,9 @@
     var data = {
       value: hour
     };
+    
+    dataHour = data;
+   
     $.ajax({
       type: "POST",
       url: "http://127.0.0.1/ssct/server/setHours.php",
@@ -53,21 +68,37 @@
 
   function _setData(data) {
     console.log(data);
-    if (data['value'] == 'calefaccion') {
+    var date = new Date();
+    
+    if (data['value'] === 'calefaccion') {
+      $('#enfriamiento').removeClass('active-cooling');
       $('#calefaccion').addClass('active-heating');
     } else {
+      $('#calefaccion').removeClass('active-heating');
       $('#enfriamiento').addClass('active-cooling');
+       
     }
+    if(state === data['value'] ){
+      console.log('no hay cambio rela');
+    }else{
+      state = data['value'];
+      console.log('hay cambio mandar para firebase');
+      db.ref('estados').push({
+        valor: state,
+        horario: dataHour.value,
+        fecha: date
+      });
+    }
+    
   }
 
   function _activate() {
-    console.log('hola bebe');
-   // _readTemperature();
+    _readTemperature();
   }
 
   _activate();
-/*  setInterval(function(){ 
+   setInterval(function(){ 
       _readTemperature();
-   }, 1000);*/
+   }, 3000);
 })();
 

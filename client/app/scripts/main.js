@@ -27,7 +27,7 @@
    });*/
 
   // Escoger horario
-  
+  var tiempo = 3000;
   $('.btn').on('click', function (event) {
     var hour = $(event.currentTarget).data('hour');
 
@@ -69,7 +69,7 @@
   function _setData(data) {
     console.log(data);
     var date = new Date();
-    
+    date = date.toString();
     if (data['value'] === 'calefaccion') {
       $('#enfriamiento').removeClass('active-cooling');
       $('#calefaccion').addClass('active-heating');
@@ -78,27 +78,43 @@
       $('#enfriamiento').addClass('active-cooling');
        
     }
-    if(state === data['value'] ){
-      console.log('no hay cambio rela');
-    }else{
+    if(state !== data['value'] ){
       state = data['value'];
-      console.log('hay cambio mandar para firebase');
-      db.ref('estados').push({
+      db.ref('estado').set({
         valor: state,
         horario: dataHour.value,
         fecha: date
       });
     }
-    
   }
-
+  
+  
+  function _getDegrees() {
+    $.ajax({
+      type: "GET",
+      url: "http://127.0.0.1/ssct/server/getDegrees.php",
+      success: function success(data) {
+        var dataRead = JSON.parse(data);
+        console.log(dataRead);
+        _mapDegrees(dataRead);
+      },
+      catch: function _catch(err) {
+        console.log(err);
+      }
+    });
+  }
+ function _mapDegrees(data) {
+   var degree = data['degree'];
+   $('#degree-'+degree.toString()).addClass('opacity');
+ }
   function _activate() {
     _readTemperature();
+    _getDegrees();
   }
 
   _activate();
    setInterval(function(){ 
-      _readTemperature();
-   }, 3000);
+     // _readTemperature();
+   }, tiempo);
 })();
 

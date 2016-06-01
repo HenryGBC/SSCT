@@ -14,7 +14,8 @@ body {
     height: 500px;
     margin: 0 auto;
     position: relative;
-
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,0.2),0 4px 5px 0 rgba(0,0,0,0.14),0 4px 7px -1px rgba(0,0,0,0.12);
+    border-radius: 8px;
 }
 .image-bg{
     background: url("../images/sistema-calefaccion-solar.jpg");
@@ -30,18 +31,24 @@ body {
 .signals{
     position: absolute;
     width: 300px;
-    height: 400px;
+    height: 390px;
+    margin-top: 10px;
 
 }
 .signals div{
     width: 70px;
     height: 55px;
     background: black;
-    border: 4px inset #757575;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+.signals div:nth-child(1){
+    margin-left: 8px;
 }
 .signals div:nth-child(2){
     position: absolute;
-    bottom: 0;
+    bottom: 16px;
+    left: 6px;
 }
 
 #calefaccion::after{
@@ -77,31 +84,31 @@ body {
 }
 
 .buttons-hours .btn{
-    background: gray;
     color: white;
     padding: 10px;
-    border-bottom: 3px solid #585858;
     font-weight: 600;
     cursor: pointer;
+    background-color: #26a69a;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
 }
 
 .buttons-hours .active{
-    background: #A5A5A5;
     padding: 10px;
     font-size: 13px;
-    border-bottom: 2px inset #585858;
     height: 17px;
+    background-color: rgba(38, 166, 154, 0.39);
 }
 
 .temperatures{
-  position: absolute;
-  height: 250px;
-  width: 60px;
-  right: 0;
-  bottom: 106px;
-  border: 2px solid black;
-  border-radius: 7px;
-  padding: 10px;
+    position: absolute;
+    height: 250px;
+    width: 60px;
+    right: 8px;
+    bottom: 106px;
+    border-radius: 5px;
+    padding: 10px;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 1px 3px 0 rgb(0, 0, 0),0 1px 1px 0 rgb(0, 0, 0),0 2px 1px -1px rgba(0, 0, 0, 0.84);
 }
 
 .grades{
@@ -121,4 +128,8 @@ body {
 }
 .cold{
   background: #17A1E2;
+}
+
+.opacity{
+    opacity: 1;
 }

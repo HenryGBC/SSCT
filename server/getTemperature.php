@@ -6,6 +6,17 @@ $modbus = new ModbusMaster("192.168.10.12", "TCP");
 
 $data_true = array(TRUE);
 $data_false = array(FALSE);
+
+/*try{
+   $recDataCold = $modbus->readCoils(0, 0, 1);
+   $recDataCalefaccion = $modbus->readCoils(0, 1, 1);  
+}
+catch (Exception $e) {
+        echo $modbus;
+        echo $e;
+        exit;
+}*/
+
 //$recDataCold = $modbus->readCoils(0, 0, 1);
 //$recDataCalefaccion = $modbus->readCoils(0, 1, 1);
 //Test without PLC

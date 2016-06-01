@@ -12,9 +12,17 @@ $valueHour =''; ///Read from PLC
 
 
 function readData(){
-   $recDataExtend= $modbus->readCoils(0, 30, 1);
-   $recDataNormal= $modbus->readCoils(0, 31, 1);
     
+   try{
+       $recDataExtend= $modbus->readCoils(0, 30, 1);
+       $recDataNormal= $modbus->readCoils(0, 31, 1);
+   }
+   catch (Exception $e) {
+        echo $modbus;
+        echo $e;
+        exit;
+    }
+   
     if($recDataExtend[0] == true && $recDataNormal[0] == false){
         $valueHour = 'extend';
     }else{

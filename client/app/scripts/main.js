@@ -32,11 +32,8 @@
     var hour = $(event.currentTarget).data('hour');
 
     console.log(hour);
-    var data = {
-      value: hour
-    };
     
-    dataHour = data;
+    dataHour = {}
    
     $.ajax({
       type: "POST",
@@ -44,6 +41,7 @@
       data: data,
       success: function success(data) {
         console.log(data);
+      
         $(event.currentTarget).addClass('active');
       },
       catch: function _catch(err) {
@@ -51,6 +49,22 @@
       }
     });
   });
+  
+  
+  function _getHour() {
+    $.ajax({
+      type: "GET",
+      url: "http://127.0.0.1/ssct/server/getHours.php",
+      success: function success(data) {
+        var dataRead = JSON.parse(data);
+        console.log(dataRead);
+        dataHour = dataRead;
+      },
+      catch: function _catch(err) {
+        console.log(err);
+      }
+    });
+  }
 
   function _readTemperature() {
     $.ajax({
@@ -68,24 +82,28 @@
 
   function _setData(data) {
     console.log(data);
-    var date = new Date();
-    date = date.toString();
-    if (data['value'] === 'calefaccion') {
-      $('#enfriamiento').removeClass('active-cooling');
-      $('#calefaccion').addClass('active-heating');
-    } else {
-      $('#calefaccion').removeClass('active-heating');
-      $('#enfriamiento').addClass('active-cooling');
-       
+    if(data['value'] !== 'none'){
+        if (data['value'] === 'calefaccion') {
+        $('#enfriamiento').removeClass('active-cooling');
+        $('#calefaccion').addClass('active-heating');
+      } else {
+        $('#calefaccion').removeClass('active-heating');
+        $('#enfriamiento').addClass('active-cooling');
+        
+      }
+      
+      $('#'+data.hour+'').addClass('active');
+      if(state !== data['value'] ){
+        state = data['value'];
+        console.log(data.hour);
+        db.ref('estado').set({
+          valor: state,
+          horario: data.hour,
+          fecha: moment().utcOffset("+00:30").format()
+        });
+      }
     }
-    if(state !== data['value'] ){
-      state = data['value'];
-      db.ref('estado').set({
-        valor: state,
-        horario: dataHour.value,
-        fecha: date
-      });
-    }
+    
   }
   
   
@@ -105,16 +123,54 @@
   }
  function _mapDegrees(data) {
    var degree = data['degree'];
-   $('#degree-'+degree.toString()).addClass('opacity');
+   var hour = moment().utcOffset("-04:00").format("h:mm:ss a");
+    db.ref('temperatura').push({
+      degree: degree,
+      hour: hour
+    });
+    
+   $('.grades').removeClass('opacity');
+   $('.grades').each(function () {
+     var dataDegree = $(this).data('degreed');
+     if(dataDegree<=degree){
+       $(this).addClass('opacity');
+     }
+   });
  }
+  db.ref("temperatura").on('value', function (snapchot) {
+    _updateTemperature(snapchot.val());
+  }); 
   function _activate() {
+    _getHour();
     _readTemperature();
     _getDegrees();
+    
+      
   }
-
+  
+  function _updateTemperature(data) {
+    var arrayIndex = [];
+    for(var index in data){
+        arrayIndex.push(index);
+        if(arrayIndex.length > 10 ){
+          db.ref("temperatura")
+             .child(arrayIndex[0])
+              .remove()
+              .then(function () {
+                console.log("remove");
+              });
+        }
+    }
+  }
+  
   _activate();
    setInterval(function(){ 
-     // _readTemperature();
-   }, tiempo);
+     // _getHour();
+     _readTemperature();
+     //_getDegrees();
+   }, 1000);
+   setInterval(function(){ 
+      _getDegrees();
+   }, 30000);
 })();
 

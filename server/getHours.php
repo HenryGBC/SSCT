@@ -9,37 +9,24 @@ $HOUR_WEEKEND = 'weekend';
 
 $valueHour =''; ///Read from PLC
 //$recData = $modbus->readCoils(0, 0, 1);
+$recDataExtend= $modbus->readCoils(0, 30, 1);
+$recDataNormal= $modbus->readCoils(0, 31, 1);
 
-
-function readData(){
-    
-   try{
-       $recDataExtend= $modbus->readCoils(0, 30, 1);
-       $recDataNormal= $modbus->readCoils(0, 31, 1);
-   }
-   catch (Exception $e) {
-        echo $modbus;
-        echo $e;
-        exit;
-    }
-   
-    if($recDataExtend[0] == true && $recDataNormal[0] == false){
-        $valueHour = 'extend';
+if($recDataExtend[0] == true && $recDataNormal[0] == false){
+    $valueHour = 'extend';
+}else{
+    if($recDataExtend[0] == false && $recDataNormal[0] == true){
+        $valueHour = 'normal';
     }else{
-       if($recDataExtend[0] == false && $recDataNormal[0] == true){
-            $valueHour = 'normal';
-        }else{
-             if($recDataExtend[0] == true && $recDataNormal[0] == true){          
-                $valueHour = 'weekend';
-             }
-        }
+            if($recDataExtend[0] == true && $recDataNormal[0] == true){          
+            $valueHour = 'weekend';
+            }
     }
-    
-    sendData($valueHour);
 }
 
-function sendData($dataHour){
-  switch ($dataHour) {
+
+
+switch ($valueHour) {
     case $HOUR_EXTEND:
         response($HOUR_EXTEND);
         break;
@@ -51,11 +38,9 @@ function sendData($dataHour){
         break;
     default:
         response('Errorrr');
-   }
-
-  
 }
 
+  
 
 function response($value){
 	$array = array(

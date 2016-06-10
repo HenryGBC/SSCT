@@ -7,23 +7,9 @@ $modbus = new ModbusMaster("192.168.10.12", "TCP");
 $data_true = array(TRUE);
 $data_false = array(FALSE);
 
-/*try{
-   $recDataCold = $modbus->readCoils(0, 0, 1);
-   $recDataCalefaccion = $modbus->readCoils(0, 1, 1);  
-}
-catch (Exception $e) {
-        echo $modbus;
-        echo $e;
-        exit;
-}*/
-
-//$recDataCold = $modbus->readCoils(0, 0, 1);
-//$recDataCalefaccion = $modbus->readCoils(0, 1, 1);
+$recDataCold = $modbus->readCoils(0, 0, 1);
+$recDataCalefaccion = $modbus->readCoils(0, 1, 1);
 //Test without PLC
-
-$rand = rand(0, 1);
-
-
 $valueTemperature = '';
 //echo $recDataCalefaccion[0][0];
 //echo $recDataCalefaccion[0];
@@ -39,14 +25,37 @@ if($recDataCalefaccion[0] == true){
 }
 
 //Test without PLC
+/*
 if($rand==0){
      $valueTemperature = "calefaccion";
 }else{
     $valueTemperature = "enfriamiento";
 }
+*/
 
+$valueHour =''; ///Read from PLC
+//$recData = $modbus->readCoils(0, 0, 1);
+$recDataExtend= $modbus->readCoils(0, 30, 1);
+$recDataNormal= $modbus->readCoils(0, 31, 1);
+
+if($recDataExtend[0] == true && $recDataNormal[0] == false){
+    $valueHour = 'extend';
+}else{
+    if($recDataExtend[0] == false && $recDataNormal[0] == true){
+        $valueHour = 'normal';
+    }else{
+            if($recDataExtend[0] == true && $recDataNormal[0] == true){          
+            $valueHour = 'weekend';
+            }
+    }
+}
+
+
+
+  
 $array = array(
     "value" => $valueTemperature,
+    "hour" => $valueHour
 );
 
 echo json_encode($array);

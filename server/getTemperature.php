@@ -33,21 +33,25 @@ if($rand==0){
 }
 */
 
-$valueHour =''; ///Read from PLC
+$valueHour ='none'; ///Read from PLC
 //$recData = $modbus->readCoils(0, 0, 1);
 $recDataExtend= $modbus->readCoils(0, 30, 1);
 $recDataNormal= $modbus->readCoils(0, 31, 1);
-
-if($recDataExtend[0] == true && $recDataNormal[0] == false){
-    $valueHour = 'extend';
+if($recDataExtend[0] == false && $recDataNormal[0] == false){
+   $valueHour ='off';
 }else{
-    if($recDataExtend[0] == false && $recDataNormal[0] == true){
-        $valueHour = 'normal';
+    if($recDataExtend[0] == true && $recDataNormal[0] == false){
+        $valueHour = 'extend';
     }else{
+        if($recDataExtend[0] == false && $recDataNormal[0] == true){
+            $valueHour = 'normal';
+        }else{
             if($recDataExtend[0] == true && $recDataNormal[0] == true){          
-            $valueHour = 'weekend';
+                $valueHour = 'weekend';
             }
+        }
     }
+
 }
 
 

@@ -98,7 +98,17 @@ body {
     height: 17px;
     background-color: rgba(38, 166, 154, 0.39);
 }
-
+.btn-off{
+    position: absolute;
+    color: white;
+    padding: 10px 17px;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #757575;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+    right: 10px;
+    top: 9px;
+}
 .temperatures{
     position: absolute;
     height: 250px;

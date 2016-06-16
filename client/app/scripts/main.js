@@ -12,9 +12,8 @@
   var db = firebase.database();
   
   var state = '';
-   var dataHour = {
-      value: 'normal'
-    }
+   var dataHour = { };
+   var dataCtrl = { };
   /*var ref = new Firebase('https://ssct.firebaseio.com/');
    ref.child('temperatureact').on('value', function(element){
     let tempAct = element.val();
@@ -33,16 +32,24 @@
 
     console.log(hour);
     
-    dataHour = {}
+    dataHour = {
+      'value': hour
+    };
    
     $.ajax({
       type: "POST",
       url: "http://127.0.0.1/ssct/server/setHours.php",
-      data: data,
+      data: dataHour,
       success: function success(data) {
         console.log(data);
-      
+        $('.btn').removeClass('active');
         $(event.currentTarget).addClass('active');
+        
+        if(hour==='off'){
+          $('#enfriamiento').removeClass('active-cooling');
+          $('#calefaccion').removeClass('active-heating');
+        }
+          
       },
       catch: function _catch(err) {
         console.log(err);
@@ -57,7 +64,7 @@
       url: "http://127.0.0.1/ssct/server/getHours.php",
       success: function success(data) {
         var dataRead = JSON.parse(data);
-        console.log(dataRead);
+        //console.log(dataRead);
         dataHour = dataRead;
       },
       catch: function _catch(err) {
@@ -81,7 +88,8 @@
   }
 
   function _setData(data) {
-    console.log(data);
+   //console.log(data);
+    dataCtrl = data;
     if(data['value'] !== 'none'){
         if (data['value'] === 'calefaccion') {
         $('#enfriamiento').removeClass('active-cooling');
@@ -91,7 +99,7 @@
         $('#enfriamiento').addClass('active-cooling');
         
       }
-      
+      $('.btn').removeClass('active');
       $('#'+data.hour+'').addClass('active');
       if(state !== data['value'] ){
         state = data['value'];
@@ -114,7 +122,13 @@
       success: function success(data) {
         var dataRead = JSON.parse(data);
         console.log(dataRead);
-        _mapDegrees(dataRead);
+        console.log(dataCtrl);
+        if(_off()){
+          $('.grades').removeClass('opacity');
+        }else{
+          _mapDegrees(dataRead);
+        }
+       
       },
       catch: function _catch(err) {
         console.log(err);
@@ -143,7 +157,7 @@
   function _activate() {
     _getHour();
     _readTemperature();
-    _getDegrees();
+    //_getDegrees();
     
       
   }
@@ -163,14 +177,21 @@
     }
   }
   
+  function _off() {
+    return dataCtrl.hour === 'off';
+  }
+  
   _activate();
    setInterval(function(){ 
      // _getHour();
+     console.log(dataCtrl);
      _readTemperature();
      //_getDegrees();
    }, 1000);
    setInterval(function(){ 
+     console.log(dataCtrl);
+    
       _getDegrees();
-   }, 30000);
+   }, 3000);
 })();
 

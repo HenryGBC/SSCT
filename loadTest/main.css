@@ -1,0 +1,407 @@
+.tablero{
+  background: #6F6F6F;
+  width: 700px;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid;
+  padding: 10px;
+  -webkit-box-shadow: -10px 9px 23px -3px rgba(51,50,51,1);
+  -moz-box-shadow: -10px 9px 23px -3px rgba(51,50,51,1);
+  box-shadow: -10px 9px 23px -3px rgba(51,50,51,1);
+  position: relative;
+}
+
+.entradas{
+  width: 580px;
+  height: 60px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  position: relative;
+}
+
+.entradas-btns{
+  width: 580px;
+  height: 30px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 12px;
+  position: absolute;
+  top: -75px;
+  left: 58px;
+
+}
+.btn{
+  width: 10px;
+  height: 10px;
+  background: #89D884;
+  border-radius: 50%;
+  border: 3px solid #4E884A;
+  box-shadow: 0px 2px 2px 1px rgb(104, 109, 101);
+  cursor: pointer;
+}
+.btn:active{
+  border: 2px solid #4E884A;
+}
+.on{
+  background: #89D884 !important;
+}
+
+.on-btn{
+  background: red;
+  border: 3px solid #B70C0C;
+}
+.salidas{
+  width: 400px;
+  height: 60px;
+  border: 1px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+  align-self: flex-end;
+  margin-right: 48px;
+}
+
+.salidas-btns{
+  width: 400px;
+  height: 30px;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 12px;
+  position: absolute;
+  top: 263px;
+  left: 240px;
+
+}
+
+.title-in{
+  position: absolute;
+color: white;
+right: 23px;
+top: 0px;
+}
+
+.title-out{
+  position: absolute;
+  color: white;
+  right: 18px;
+  top: 130px;
+}
+
+.led{
+  height: 15px;
+  width: 15px;
+  background: #BBB6B6;
+  margin-top: 10px;
+  position: relative;
+}
+#in-0::before {
+  content: '0';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+#in-1::before {
+  content: '1';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-2::before {
+  content: '2';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-3::before {
+  content: '3';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-4::before {
+  content: '4';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-5::before {
+  content: '5';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-6::before {
+  content: '6';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-7::before {
+  content: '7';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-8::before {
+  content: '8';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-9::before {
+  content: '9';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-10::before {
+  content: '10';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-11::before {
+  content: '11';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-12::before {
+  content: '12';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-13::before {
+  content: '13';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-14::before {
+  content: '14';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-15::before {
+  content: '15';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-16::before {
+  content: '16';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-17::before {
+  content: '17';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-18::before {
+  content: '18';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-19::before {
+  content: '19';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-20::before {
+  content: '20';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-21::before {
+  content: '21';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-22::before {
+  content: '22';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+#in-23::before {
+  content: '23';
+  position: absolute;
+  top: 20px;
+  color: white;
+  font-weight: bold;
+}
+.entradas .led::after {
+  content: '';
+  border: 1px solid black;
+  position: absolute;
+  top: -82px;
+  height: 78px;
+  left: 7px;
+}
+.salidas .led::after {
+  content: '';
+  border: 1px solid black;
+  position: absolute;
+  top: 17px;
+  height: 115px;
+  left: 7px;
+}
+
+#out-24::before {
+  content: '0';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-25::before {
+  content: '1';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-26::before {
+  content: '2';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-27::before {
+  content: '3';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-28::before {
+  content: '0';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-29::before {
+  content: '5';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-30::before {
+  content: '6';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-31::before {
+  content: '7';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-32::before {
+  content: '8';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-33::before {
+  content: '9';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-34::before {
+  content: '10';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-35::before {
+  content: '11';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-36::before {
+  content: '12';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-37::before {
+  content: '13';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-38::before {
+  content: '14';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}
+#out-39::before {
+  content: '15';
+  position: absolute;
+  top: -19px;
+  color: white;
+  font-weight: bold;
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+  <DocumentManager>
+    <FileVersion>1.0</FileVersion>
+    <FolderName>$</FolderName>
+    <PrintConfig>TRUE</PrintConfig>
+    <PrintContent>TRUE</PrintContent>
+    <Header>
+      <Left>
+        <InfoType>0</InfoType>
+      </Left>
+      <Center>
+        <InfoType>1</InfoType>
+      </Center>
+      <Right>
+        <InfoType>9</InfoType>
+      </Right>
+    </Header>
+    <Footer>
+      <Left>
+        <InfoType>5</InfoType>
+      </Left>
+      <Center>
+        <InfoType>5</InfoType>
+      </Center>
+      <Right>
+        <InfoType>6</InfoType>
+      </Right>
+    </Footer>
+    <Margins>
+      <Left>1250</Left>
+      <Right>1250</Right>
+      <Top>1250</Top>
+      <Bottom>1250</Bottom>
+    </Margins>
+  </DocumentManager>
+
+

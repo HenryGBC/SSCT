@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+  <describe zoomD="100" zoomN="100" modelX="2" modelY="1" modelType="FALSE">
+    <FileVersion>1.0</FileVersion>
+    <brick name="TWIDO1">
+      <base ref="TWDLCAE40DRF" xpos="134" ypos="184" label="Mi Twido">
+      </base>
+      <leftModuleList>
+      </leftModuleList>
+      <expansionList>
+      </expansionList>
+      <optionList>
+      </optionList>
+      <portList>
+        <port nmbr="1">
+          <address>1</address>
+          <protocol>LDISTANTE</protocol>
+          <IsModBusMaster>0</IsModBusMaster>
+        </port>
+        <port nmbr="2">
+          <address>1</address>
+          <protocol>ETHERNET</protocol>
+          <IsModBusMaster>0</IsModBusMaster>
+        </port>
+      </portList>
+    </brick>
+    <networkElementList>
+    </networkElementList>
+    <networkList>
+    </networkList>
+    <postItList>
+    </postItList>
+  </describe>
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+  <ProjectManager>
+    <FileVersion>1.0</FileVersion>
+    <ProjectInfo>
+      <Author>$</Author>
+      <Index>$</Index>
+      <Service>$</Service>
+      <Owner>$</Owner>
+      <Comments>$</Comments>
+      <Picture>logo.bmp</Picture>
+    </ProjectInfo>
+    <ProjectHistory>
+      <Date>$</Date>
+      <Author>$</Author>
+      <Version>$</Version>
+      <Comments>$</Comments>
+      <CreateDate>24/05/2016</CreateDate>
+      <ModifyDate>24/05/2016</ModifyDate>
+    </ProjectHistory>
+    <DocumentationSettings>
+      <Print>TRUE</Print>
+      <FirstPage>
+        <PrintDate>TRUE</PrintDate>
+        <Print>TRUE</Print>
+      </FirstPage>
+      <History>
+        <Print>TRUE</Print>
+      </History>
+    </DocumentationSettings>
+    <ProjectFileList>
+      <ToolFileList instance="Twido1">
+        <ToolFile path="Twido1.xtwd">$</ToolFile>
+        <ToolFile path="Twido1.xmod">$</ToolFile>
+      </ToolFileList>
+      <ToolFileList instance="Documentation0">
+        <ToolFile path="Global.xdm">$</ToolFile>
+      </ToolFileList>
+      <ToolFileList instance="Decrire0">
+        <ToolFile path="Global.dsc.xml">$</ToolFile>
+        <ToolFile path="AS_DC35_Print.dsc.xml">$</ToolFile>
+      </ToolFileList>
+    </ProjectFileList>
+  </ProjectManager>
+
+

@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+  <TwidoApplication>
+    <FileVersion>1.0</FileVersion>
+    <SymbolTable>
+    </SymbolTable>
+    <Resources>
+      <MODEM>
+        <HAYES_INIT_COMMAND>$</HAYES_INIT_COMMAND>
+      </MODEM>
+      <AppTable>
+        <AppTableVersion>3</AppTableVersion>
+        <CompatibilityFlags>10</CompatibilityFlags>
+        <LevelChosen>255</LevelChosen>
+        <Password>$</Password>
+        <AppName>Mi Twido</AppName>
+        <AppVersion>1</AppVersion>
+        <AppSignature>14643</AppSignature>
+        <AppMaxCycleTime>250</AppMaxCycleTime>
+        <AppMinCycleTime>0</AppMinCycleTime>
+        <Protection>0</Protection>
+        <Autoload>0</Autoload>
+        <AppReadyToRun>1</AppReadyToRun>
+        <LenListIdTableModBuffer>4982</LenListIdTableModBuffer>
+        <AppIntModBufferLength>25904</AppIntModBufferLength>
+        <AppMaxModsAllowed>1619</AppMaxModsAllowed>
+        <AppDiffLadderSize>0</AppDiffLadderSize>
+        <AppNumExtLabel>2</AppNumExtLabel>
+        <AppNumModsUsedInt>0</AppNumModsUsedInt>
+        <LangVersion>1</LangVersion>
+        <CompilerVersion>1</CompilerVersion>
+        <CompilerSettings>0</CompilerSettings>
+        <HardwarePartNumber>TWDLCAE40DRF</HardwarePartNumber>
+        <HardwareID>2233</HardwareID>
+        <HWOptionsStatus>68</HWOptionsStatus>
+        <AppTableChksum>62220</AppTableChksum>
+        <AppStructChksum>25663</AppStructChksum>
+        <HWOptionsPartNumber>TWDXCPRTC</HWOptionsPartNumber>
+      </AppTable>
+      <KWTable>
+      </KWTable>
+      <CfgTable>
+        <CfgTableVersion>6</CfgTableVersion>
+      </CfgTable>
+      <SwObjList>
+        <BaseDigInput>
+          <BDI12Filter>0</BDI12Filter>
+          <BDI3Filter>16777215</BDI3Filter>
+          <BDICapture>0</BDICapture>
+          <BDIRunStop>0</BDIRunStop>
+          <BDINumInputs>24</BDINumInputs>
+          <BDIIsDedicated>0</BDIIsDedicated>
+        </BaseDigInput>
+        <BaseDigOutput>
+          <BDONumOutputs>16</BDONumOutputs>
+          <BDOOutputStat>0</BDOOutputStat>
+          <BDOIsDedicated>0</BDOIsDedicated>
+        </BaseDigOutput>
+        <BaseAnalogInput>
+          <BAINumInputs>2</BAINumInputs>
+          <BAIPrecision>0</BAIPrecision>
+        </BaseAnalogInput>
+        <CommObj>
+          <CmDeviceRemote>0</CmDeviceRemote>
+          <CmDeviceTypeRemote>0</CmDeviceTypeRemote>
+          <CmIndex>0</CmIndex>
+          <CmPort1Address>1</CmPort1Address>
+          <CmPort1LnCfg>0</CmPort1LnCfg>
+          <CmPort1Protocol>1</CmPort1Protocol>
+          <CmPort1MbTimeout>1</CmPort1MbTimeout>
+          <CmPort1RespTimeout>1</CmPort1RespTimeout>
+          <CmPort1EndOfFrame>10</CmPort1EndOfFrame>
+          <CmPort2Address>1</CmPort2Address>
+          <CmPort2LnCfg>180</CmPort2LnCfg>
+          <CmPort2Protocol>0</CmPort2Protocol>
+          <CmPort2MbTimeout>10</CmPort2MbTimeout>
+          <CmPort2RespTimeout>10</CmPort2RespTimeout>
+          <CmPort2EndOfFrame>10</CmPort2EndOfFrame>
+          <CmPort1StartOfFrame>0</CmPort1StartOfFrame>
+          <CmPort1SecondEndOfFrame>0</CmPort1SecondEndOfFrame>
+          <CmPort1SizeASCIIFrame>0</CmPort1SizeASCIIFrame>
+          <CmPort2StartOfFrame>0</CmPort2StartOfFrame>
+          <CmPort2SecondEndOfFrame>0</CmPort2SecondEndOfFrame>
+          <CmPort2SizeASCIIFrame>0</CmPort2SizeASCIIFrame>
+          <CmFlagSilenceUsed>0</CmFlagSilenceUsed>
+          <CmAsciiEofTxEnabler>0</CmAsciiEofTxEnabler>
+          <CmPunitLnCfg>132</CmPunitLnCfg>
+          <CmPunitMbTimeout>20</CmPunitMbTimeout>
+        </CommObj>
+        <Ethernet>
+          <EthernetDefaultIP>0</EthernetDefaultIP>
+          <EthernetIP>192.168.10.12</EthernetIP>
+          <EthernetSubMask>255.255.255.0</EthernetSubMask>
+          <EthernetGateway>192.168.10.10</EthernetGateway>
+          <EthernetWantMarkedIP>0</EthernetWantMarkedIP>
+          <EthernetIdleTime>10</EthernetIdleTime>
+          <EthernetNumSlave>0</EthernetNumSlave>
+        </Ethernet>
+      </SwObjList>
+      <MacCfgList>
+      </MacCfgList>
+    </Resources>
+    <Program>
+      <Section SType="0" Header="Entradas" Display="1" SectionNum="1">
+        <ListInstruction>LD    %I0.0.0</ListInstruction>
+        <ListInstruction>ST    %M0</ListInstruction>
+        <ListInstruction>LD    %I0.0.1</ListInstruction>
+        <ListInstruction>ST    %M1</ListInstruction>
+        <ListInstruction>LD    %I0.0.2</ListInstruction>
+        <ListInstruction>ST    %M2</ListInstruction>
+        <ListInstruction>LD    %I0.0.3</ListInstruction>
+        <ListInstruction>ST    %M3</ListInstruction>
+        <ListInstruction>LD    %I0.0.4</ListInstruction>
+        <ListInstruction>ST    %M4</ListInstruction>
+        <ListInstruction>LD    %I0.0.5</ListInstruction>
+        <ListInstruction>ST    %M5</ListInstruction>
+        <ListInstruction>LD    %I0.0.6</ListInstruction>
+        <ListInstruction>ST    %M6</ListInstruction>
+        <ListInstruction>LD    %I0.0.7</ListInstruction>
+        <ListInstruction>ST    %M7</ListInstruction>
+        <ListInstruction>LD    %I0.0.8</ListInstruction>
+        <ListInstruction>ST    %M8</ListInstruction>
+        <ListInstruction>LD    %I0.0.9</ListInstruction>
+        <ListInstruction>ST    %M9</ListInstruction>
+        <ListInstruction>LD    %I0.0.10</ListInstruction>
+        <ListInstruction>ST    %M10</ListInstruction>
+        <ListInstruction>LD    %I0.0.11</ListInstruction>
+        <ListInstruction>ST    %M11</ListInstruction>
+        <ListInstruction>LD    %I0.0.12</ListInstruction>
+        <ListInstruction>ST    %M12</ListInstruction>
+        <ListInstruction>LD    %I0.0.13</ListInstruction>
+        <ListInstruction>ST    %M13</ListInstruction>
+        <ListInstruction>LD    %I0.0.14</ListInstruction>
+        <ListInstruction>ST    %M14</ListInstruction>
+        <ListInstruction>LD    %I0.0.15</ListInstruction>
+        <ListInstruction>ST    %M15</ListInstruction>
+        <ListInstruction>LD    %I0.0.16</ListInstruction>
+        <ListInstruction>ST    %M16</ListInstruction>
+        <ListInstruction>LD    %I0.0.17</ListInstruction>
+        <ListInstruction>ST    %M17</ListInstruction>
+        <ListInstruction>LD    %I0.0.18</ListInstruction>
+        <ListInstruction>ST    %M18</ListInstruction>
+        <ListInstruction>LD    %I0.0.19</ListInstruction>
+        <ListInstruction>ST    %M19</ListInstruction>
+        <ListInstruction>LD    %I0.0.20</ListInstruction>
+        <ListInstruction>ST    %M20</ListInstruction>
+        <ListInstruction>LD    %I0.0.21</ListInstruction>
+        <ListInstruction>ST    %M21</ListInstruction>
+        <ListInstruction>LD    %I0.0.22</ListInstruction>
+        <ListInstruction>ST    %M22</ListInstruction>
+        <ListInstruction>LD    %I0.0.23</ListInstruction>
+        <ListInstruction>ST    %M23</ListInstruction>
+      </Section>
+      <Section SType="0" Header="Salida" Display="1" SectionNum="2">
+        <ListInstruction>LD    %M24</ListInstruction>
+        <ListInstruction>ST    %Q0.0.0</ListInstruction>
+        <ListInstruction>LD    %M25</ListInstruction>
+        <ListInstruction>ST    %Q0.0.1</ListInstruction>
+        <ListInstruction>LD    %M26</ListInstruction>
+        <ListInstruction>ST    %Q0.0.2</ListInstruction>
+        <ListInstruction>LD    %M27</ListInstruction>
+        <ListInstruction>ST    %Q0.0.3</ListInstruction>
+        <ListInstruction>LD    %M28</ListInstruction>
+        <ListInstruction>ST    %Q0.0.4</ListInstruction>
+        <ListInstruction>LD    %M29</ListInstruction>
+        <ListInstruction>ST    %Q0.0.5</ListInstruction>
+        <ListInstruction>LD    %M30</ListInstruction>
+        <ListInstruction>ST    %Q0.0.6</ListInstruction>
+        <ListInstruction>LD    %M31</ListInstruction>
+        <ListInstruction>ST    %Q0.0.7</ListInstruction>
+        <ListInstruction>LD    %M32</ListInstruction>
+        <ListInstruction>ST    %Q0.0.8</ListInstruction>
+        <ListInstruction>LD    %M33</ListInstruction>
+        <ListInstruction>ST    %Q0.0.9</ListInstruction>
+        <ListInstruction>LD    %M34</ListInstruction>
+        <ListInstruction>ST    %Q0.0.10</ListInstruction>
+        <ListInstruction>LD    %M35</ListInstruction>
+        <ListInstruction>ST    %Q0.0.11</ListInstruction>
+        <ListInstruction>LD    %M36</ListInstruction>
+        <ListInstruction>ST    %Q0.0.12</ListInstruction>
+        <ListInstruction>LD    %M37</ListInstruction>
+        <ListInstruction>ST    %Q0.0.13</ListInstruction>
+        <ListInstruction>LD    %M38</ListInstruction>
+        <ListInstruction>ST    %Q0.0.14</ListInstruction>
+        <ListInstruction>LD    %M39</ListInstruction>
+        <ListInstruction>ST    %Q0.0.15</ListInstruction>
+      </Section>
+      <ProgramValidated>TRUE</ProgramValidated>
+      <ProgramForceValidation>FALSE</ProgramForceValidation>
+    </Program>
+    <Context>
+      <LgthObjTableUsed>0</LgthObjTableUsed>
+      <ConstantConfiguredTag>0</ConstantConfiguredTag>
+      <CounterConfiguredTag>0</CounterConfiguredTag>
+      <DrumConfiguredTag>0</DrumConfiguredTag>
+      <FCounterConfiguredTag>0</FCounterConfiguredTag>
+      <LifoFifoConfiguredTag>0</LifoFifoConfiguredTag>
+      <WordConfiguredTag>0</WordConfiguredTag>
+      <PlsConfiguredTag>0</PlsConfiguredTag>
+      <ShiftBitRegConfiguredTag>0</ShiftBitRegConfiguredTag>
+      <ScheduleBlockConfiguredTag>0</ScheduleBlockConfiguredTag>
+      <StepCounterConfiguredTag>0</StepCounterConfiguredTag>
+      <TimerConfiguredTag>0</TimerConfiguredTag>
+      <VFastCounterConfiguredTag>0</VFastCounterConfiguredTag>
+      <ZoomViewer>  0</ZoomViewer>
+      <ZoomEditor>  0</ZoomEditor>
+      <ZoomLadder>3</ZoomLadder>
+    </Context>
+    <PrintSettings>
+      <HardwareSettings>
+        <Print>TRUE</Print>
+        <Base>
+          <Reference>TRUE</Reference>
+          <Description>FALSE</Description>
+          <Inputs>FALSE</Inputs>
+          <Outputs>FALSE</Outputs>
+          <OnlyUsed>FALSE</OnlyUsed>
+        </Base>
+        <Modules>
+          <Reference>TRUE</Reference>
+          <Description>FALSE</Description>
+          <ModuleConfig>FALSE</ModuleConfig>
+          <Inputs>FALSE</Inputs>
+          <Outputs>FALSE</Outputs>
+          <OnlyUsed>FALSE</OnlyUsed>
+        </Modules>
+        <PrintSerialPort>FALSE</PrintSerialPort>
+        <PrintModem>FALSE</PrintModem>
+        <PrintEthernet>FALSE</PrintEthernet>
+        <PrintEtherPort>FALSE</PrintEtherPort>
+        <PrintRTC>FALSE</PrintRTC>
+        <PrintCartridge>FALSE</PrintCartridge>
+      </HardwareSettings>
+      <ObjectsSettings>
+        <Print>TRUE</Print>
+        <AllSimple>TRUE</AllSimple>
+        <PrintConstantDouble>FALSE</PrintConstantDouble>
+        <PrintConstantWord>FALSE</PrintConstantWord>
+        <PrintConstantFloat>FALSE</PrintConstantFloat>
+        <PrintMemoryDouble>FALSE</PrintMemoryDouble>
+        <PrintMemoryWord>FALSE</PrintMemoryWord>
+        <PrintMemoryFloat>FALSE</PrintMemoryFloat>
+        <PrintMemoryBit>FALSE</PrintMemoryBit>
+        <AllBlocks>TRUE</AllBlocks>
+        <PrintTimers>FALSE</PrintTimers>
+        <PrintCounters>FALSE</PrintCounters>
+        <PrintFastCounter>FALSE</PrintFastCounter>
+        <PrintVeryFastCounter>FALSE</PrintVeryFastCounter>
+        <PrintSchedulerBlock>FALSE</PrintSchedulerBlock>
+        <PrintDrums>FALSE</PrintDrums>
+        <PrintPID>FALSE</PrintPID>
+        <PrintPLSPWM>FALSE</PrintPLSPWM>
+        <PrintLIFOFIFO>FALSE</PrintLIFOFIFO>
+        <AllExterns>TRUE</AllExterns>
+        <PrintMacroComm>FALSE</PrintMacroComm>
+        <PrintMacroDrive>FALSE</PrintMacroDrive>
+        <PrintMacroTesys>FALSE</PrintMacroTesys>
+        <PrintMacroOtb>FALSE</PrintMacroOtb>
+        <PrintObjectsOnlyUsed>TRUE</PrintObjectsOnlyUsed>
+        <PrintObjectsIndicateMax>FALSE</PrintObjectsIndicateMax>
+      </ObjectsSettings>
+      <MemoryReportSettings>
+        <Print>TRUE</Print>
+        <PrintMemStat>TRUE</PrintMemStat>
+        <PrintMemAlloc>TRUE</PrintMemAlloc>
+      </MemoryReportSettings>
+      <ApplicationSettings>
+        <Print>TRUE</Print>
+      </ApplicationSettings>
+      <ProgramSettings>
+        <Print>TRUE</Print>
+        <ProgramAllSectionsToList>FALSE</ProgramAllSectionsToList>
+        <ProgramSectionRange>0</ProgramSectionRange>
+        <ProgramSectionStart>1</ProgramSectionStart>
+        <ProgramSectionEnd>9999</ProgramSectionEnd>
+        <ProgramLinesRungsRange>0</ProgramLinesRungsRange>
+        <ProgramLinesRungsStart>0</ProgramLinesRungsStart>
+        <ProgramLinesRungsEnd>9999</ProgramLinesRungsEnd>
+        <PrintProgramLadder>
+          <ProgramRange>0</ProgramRange>
+          <ProgramStart>0</ProgramStart>
+          <ProgramEnd>9999</ProgramEnd>
+          <ProgramAddresses>FALSE</ProgramAddresses>
+          <ProgramSymbols>FALSE</ProgramSymbols>
+          <ProgramAddrSymb>TRUE</ProgramAddrSymb>
+          <ProgramEntireAddress>TRUE</ProgramEntireAddress>
+          <ProgramInfo>FALSE</ProgramInfo>
+        </PrintProgramLadder>
+        <PrintProgramList>
+          <ProgramRange>0</ProgramRange>
+          <ProgramStart>0</ProgramStart>
+          <ProgramEnd>9999</ProgramEnd>
+          <ProgramAddresses>TRUE</ProgramAddresses>
+          <ProgramSymbols>FALSE</ProgramSymbols>
+          <ProgramInfo>FALSE</ProgramInfo>
+          <ProgramRealMacroCode>FALSE</ProgramRealMacroCode>
+        </PrintProgramList>
+      </ProgramSettings>
+      <SymbolsSettings>
+        <Print>TRUE</Print>
+        <PrintSortOrder>1</PrintSortOrder>
+      </SymbolsSettings>
+      <CrossRef>
+        <Print>TRUE</Print>
+        <AllCrossRef>TRUE</AllCrossRef>
+        <CrossRefElements>0</CrossRefElements>
+        <CrossRefSort>0</CrossRefSort>
+        <CrossRefAllSection>FALSE</CrossRefAllSection>
+        <CrossRefRangeSection>FALSE</CrossRefRangeSection>
+        <CrossRefOneSection>FALSE</CrossRefOneSection>
+        <CrossRefFirstAsapSection>1</CrossRefFirstAsapSection>
+        <CrossRefLastAsapSection>9999</CrossRefLastAsapSection>
+        <CrossRefAllLinesRungs>FALSE</CrossRefAllLinesRungs>
+        <CrossRefFirstAsapLineRung>1</CrossRefFirstAsapLineRung>
+        <CrossRefLastAsapLineRung>9999</CrossRefLastAsapLineRung>
+      </CrossRef>
+      <Behavior>
+        <Print>TRUE</Print>
+        <BehaviorFunctionaLevels>TRUE</BehaviorFunctionaLevels>
+        <BehaviorScanMode>TRUE</BehaviorScanMode>
+        <BehaviorStart>TRUE</BehaviorStart>
+        <BehaviorAutomaticSave>TRUE</BehaviorAutomaticSave>
+      </Behavior>
+      <AnimTable>
+        <Print>TRUE</Print>
+      </AnimTable>
+      <RootNode>
+        <RootNodeTwido>TRUE</RootNodeTwido>
+        <RootNodeConfiguration>TRUE</RootNodeConfiguration>
+        <RootNodeProgram>TRUE</RootNodeProgram>
+      </RootNode>
+    </PrintSettings>
+    <TwidoDisconnection>
+      <AutomatedBackup>TRUE</AutomatedBackup>
+    </TwidoDisconnection>
+  </TwidoApplication>
+
+

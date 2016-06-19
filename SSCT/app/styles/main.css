@@ -1,0 +1,102 @@
+
+body {
+  background: #F5F5F5;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+.content{
+    background: white;
+    width: 70vw;
+    height: 700px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
+    margin-top: 2em;
+
+}
+
+.header{
+    background-color: #ECECEC;
+    box-shadow: 0 -1px 0 rgba(0,0,0,0.12) inset;
+    color: rgba(0, 0, 0, 0.75);
+    display: block;
+    font-size: 14px;
+    height: 45px;
+    /* min-height: 56px; */
+    overflow-y: hidden;
+    padding-right: 8px;
+    padding: 18px 20px 0px 24px;
+    font-size: 18px;
+}
+
+.cards-info{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+
+.card{
+    width: 15em;
+    text-align: center;
+    /* box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15); */
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
+    padding: 2em; 
+    text-transform: capitalize;
+}
+
+.card .color-estado{
+    width: 70px;
+    height: 55px;
+    background: black;
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.18),0 4px 15px 0 rgba(0,0,0,0.15);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+.card .nombre-estado{
+    margin-top: 1em;
+    font-size: 1em;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.27);
+    padding: 0.5em;
+}
+
+.card .horario-estado{
+    margin-top: 1em;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.card .card-fecha{
+   padding: 1em 2em;
+}
+.card .fecha-header{
+    border-bottom: 1px solid #D4D4D4;
+    padding-bottom: 1em;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.card .fecha{
+       padding: 0.4em;
+    font-size: 2em;
+}
+
+.heat{
+  background: #FFEB3B !important; 
+}
+
+.cold{
+  background: #03A9F4 !important; 
+}
+
+.chart{
+    width: 70vw;
+    height: 20vh;
+    
+   
+}
+
+.chart #myChart{
+    width: 70vw !important;
+    height: 388px !important;
+}

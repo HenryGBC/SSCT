@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SSCT</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div class="content">
+        <div class="header">
+           <span>Sistema Supervisor del Control de Temperatura</span>
+        </div>
+        
+        
+        <div class="cards-info">
+          <div class="card card-estado">
+            <div class="color-estado"></div>
+            <div class="nombre-estado">
+              <span id="state"></span>
+            </div>
+            <div class="horario-estado">
+              <span>Horario: </span>
+              <span id="horarioState"></span>
+            </div>
+          </div>
+          <div class="card card-estado">
+            <div class="fecha-header">
+              <span>Fecha</span>
+            </div>
+            <div class="fecha">
+              <span id="date"></span>
+            </div>
+            <div class="fecha ">
+              <span id="hora"></span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="chart">
+          <canvas id="myChart" width="100" height="100" ></canvas>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/moment/min/moment.min.js"></script>
+    <script src="/bower_components/moment/min/locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>
